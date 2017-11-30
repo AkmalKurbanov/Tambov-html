@@ -1,0 +1,439 @@
+body{
+	font-family: 'Open Sans', sans-serif;
+}
+
+
+.caption-wrap{
+	text-align: center;
+	h2{
+		font-size: 30px;
+		color: #292929;
+		font-weight: 700;
+		margin: 0;
+		@media screen and (max-width: 500px){
+			font-size: 23px;
+		}
+	}
+}
+
+// popup окна начало 
+.window{
+	position: relative;
+	background: #FFF;
+	padding: 50px;
+	width: auto;
+	max-width: 450px;
+	margin: 20px auto;
+	@media (max-width: $screen-md-max){
+		padding: 40px;
+	}
+	@media (max-width: $screen-sm-max){
+		padding: 30px;
+	}
+	@media (max-width: $screen-xs-max){
+		padding: 35px 25px 25px;
+	}
+	h2{
+		margin: 0;
+		font-size: 21px;
+		padding-bottom: 22px;
+		color: #1d71b8;
+	}
+	.login-form{
+		::-webkit-input-placeholder{
+			color:#1d71b8;
+			font-size: 15px;
+			opacity: 0.6;
+		}
+		::-moz-placeholder{
+			color:#1d71b8;
+			font-size: 15px;
+			opacity: 0.6;
+		}
+		:-moz-placeholder{
+			color:#1d71b8;
+			font-size: 15px;
+			opacity: 0.6;
+		}
+		:-ms-input-placeholder{
+			color:#1d71b8;
+			font-size: 15px;
+			opacity: 0.6;
+		}
+		input[type="text"],input[type="password"]{
+			max-width: 100%;
+			width: 100%;
+			min-height: 40px;
+			border: 1px solid #1d71b8;
+			padding-left: 15px;
+			padding-right: 40px;
+			outline: none;
+			margin-bottom: 20px;
+		}
+		.input-login{
+			position: relative;
+			max-width: 400px;
+			width: 100%;
+			margin: auto;
+			&:before{
+				content: "\f2c0";
+				font-family: "FontAwesome";
+				position: absolute;
+				right: 20px;
+				top: 50%;
+				transform: translateY(-90%);
+				font-size: 18px;
+				color: #1d71b8;
+			}
+		}
+		.input-password{
+			position: relative;
+			max-width: 400px;
+			width: 100%;
+			margin: auto;
+			&:before{
+				content: "\f023";
+				font-family: "FontAwesome";
+				position: absolute;
+				right: 22px;
+				top: 50%;
+				transform: translateY(-90%);
+				font-size: 19px;
+				color: #1d71b8;
+			}
+		}
+		.input-check-box{
+			display: inline-block;
+			label{
+				margin: 0;
+				font-weight: 400;
+				color: #1d71b8;
+				cursor: pointer;
+				input{
+					width: 15px;
+					height: 15px;
+					outline: none;
+					margin-right: 10px;
+					margin-top: 0;
+					vertical-align: middle;
+				}
+			}
+		}
+		a{
+			float: right;
+		}
+		button{
+			display: block;
+			max-width: 205px;
+			width: 100%;
+			min-height: 48px;
+			line-height: 49px;
+			text-align: center;
+			color: #fff;
+			font-size: 15px;
+			font-weight: 600;
+			background-color: #ec4d27;
+			display: block;
+			border-radius: 24px;
+			margin: auto;
+			margin-top: 30px;
+			transition: all .3s ease;
+			text-decoration: none;
+			outline: none;
+			border: none;
+			&:hover{
+				box-shadow: 0 8px 16px 0 rgba(253,73,25,.44);
+			}
+		}
+	}
+}
+// popup окна конец
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// trigger начало
+.navtrigger {
+	cursor: pointer;
+	width: 30px;
+	height: 25px;
+	margin-top: 0;
+	margin-right: 0;
+	position: absolute;
+	display: none;
+	font-size: 35px;
+	color: #fff;
+	right: 20px;
+	top: 13px;
+	cursor: pointer;
+	z-index: 999;
+	@media (max-width: $screen-sm-max) {
+		display: block;
+	}
+	i {
+		background-color: #1d71b8;
+		border-radius: 2px;
+		content: '';
+		display: block;
+		width: 100%;
+		height: 4px;
+	}
+
+	i:nth-child(1) {
+		-webkit-animation: outT 0.8s backwards;
+		animation: outT 0.8s backwards;
+		-webkit-animation-direction: reverse;
+		animation-direction: reverse;
+	}
+
+	i:nth-child(2) {
+		margin: 5px 0;
+		-webkit-animation: outM 0.8s backwards;
+		animation: outM 0.8s backwards;
+		-webkit-animation-direction: reverse;
+		animation-direction: reverse;
+	}
+
+	i:nth-child(3) {
+		-webkit-animation: outBtm 0.8s backwards;
+		animation: outBtm 0.8s backwards;
+		-webkit-animation-direction: reverse;
+		animation-direction: reverse;
+	}
+
+	&.-active i:nth-child(1) {
+		-webkit-animation: inT 0.8s forwards;
+		animation: inT 0.8s forwards;
+	}
+
+	&.-active i:nth-child(2) {
+		-webkit-animation: inM 0.8s forwards;
+		animation: inM 0.8s forwards;
+	}
+
+	&.-active i:nth-child(3) {
+		-webkit-animation: inBtm 0.8s forwards;
+		animation: inBtm 0.8s forwards;
+	}
+}
+// trigger конец
+
+
+
+
+// mmenu начало
+@-webkit-keyframes gearA {
+	0% {
+		-webkit-transform: rotate(0);
+		transform: rotate(0);
+	}
+	100% {
+		-webkit-transform: rotate(360deg);
+		transform: rotate(360deg);
+	}
+}
+@keyframes gearA {
+	0% {
+		-webkit-transform: rotate(0);
+		transform: rotate(0);
+	}
+	100% {
+		-webkit-transform: rotate(360deg);
+		transform: rotate(360deg);
+	}
+}
+@-webkit-keyframes gearB {
+	0% {
+		-webkit-transform: rotate(0);
+		transform: rotate(0);
+	}
+	100% {
+		-webkit-transform: rotate(-360deg);
+		transform: rotate(-360deg);
+	}
+}
+@keyframes gearB {
+	0% {
+		-webkit-transform: rotate(0);
+		transform: rotate(0);
+	}
+	100% {
+		-webkit-transform: rotate(-360deg);
+		transform: rotate(-360deg);
+	}
+}
+
+
+@-webkit-keyframes inM {
+	50% {
+		-webkit-transform: rotate(0deg);
+	}
+	100% {
+		-webkit-transform: rotate(45deg);
+	}
+}
+
+@keyframes inM {
+	50% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(45deg);
+	}
+}
+
+@-webkit-keyframes outM {
+	50% {
+		-webkit-transform: rotate(0deg);
+	}
+	100% {
+		-webkit-transform: rotate(45deg);
+	}
+}
+
+@keyframes outM {
+	50% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(45deg);
+	}
+}
+
+@-webkit-keyframes inT {
+	0% {
+		-webkit-transform: translateY(0px) rotate(0deg);
+	}
+	50% {
+		-webkit-transform: translateY(9px) rotate(0deg);
+	}
+	100% {
+		-webkit-transform: translateY(9px) rotate(135deg);
+	}
+}
+
+@keyframes inT {
+	0% {
+		transform: translateY(0px) rotate(0deg);
+	}
+	50% {
+		transform: translateY(9px) rotate(0deg);
+	}
+	100% {
+		transform: translateY(9px) rotate(135deg);
+	}
+}
+
+@-webkit-keyframes outT {
+	0% {
+		-webkit-transform: translateY(0px) rotate(0deg);
+	}
+	50% {
+		-webkit-transform: translateY(9px) rotate(0deg);
+	}
+	100% {
+		-webkit-transform: translateY(9px) rotate(135deg);
+	}
+}
+
+@keyframes outT {
+	0% {
+		transform: translateY(0px) rotate(0deg);
+	}
+	50% {
+		transform: translateY(9px) rotate(0deg);
+	}
+	100% {
+		transform: translateY(9px) rotate(135deg);
+	}
+}
+
+@-webkit-keyframes inBtm {
+	0% {
+		-webkit-transform: translateY(0px) rotate(0deg);
+	}
+	50% {
+		-webkit-transform: translateY(-9px) rotate(0deg);
+	}
+	100% {
+		-webkit-transform: translateY(-9px) rotate(135deg);
+	}
+}
+
+@keyframes inBtm {
+	0% {
+		transform: translateY(0px) rotate(0deg);
+	}
+	50% {
+		transform: translateY(-9px) rotate(0deg);
+	}
+	100% {
+		transform: translateY(-9px) rotate(135deg);
+	}
+}
+
+@-webkit-keyframes outBtm {
+	0% {
+		-webkit-transform: translateY(0px) rotate(0deg);
+	}
+	50% {
+		-webkit-transform: translateY(-9px) rotate(0deg);
+	}
+	100% {
+		-webkit-transform: translateY(-9px) rotate(135deg);
+	}
+}
+
+@keyframes outBtm {
+	0% {
+		transform: translateY(0px) rotate(0deg);
+	}
+	50% {
+		transform: translateY(-9px) rotate(0deg);
+	}
+	100% {
+		transform: translateY(-9px) rotate(135deg);
+	}
+}
+
+.mm-navbar {
+	height: 100px;
+	img{
+		max-width: 100%;
+		padding-top: 0;
+	}
+}
+
+.mm-panels>.mm-panel>.mm-listview:first-child, .mm-panels>.mm-panel>.mm-navbar+.mm-listview {
+	margin-top: 40px;
+	i{
+		display: none;
+	}
+}
+
+.mm-right.mm-opening .mm-menu.mm-fx-menu-slide {
+	z-index: 999999;
+}
+
+// mmenu конец

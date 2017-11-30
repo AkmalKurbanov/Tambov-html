@@ -1,0 +1,132 @@
+.news{
+	padding-top: 85px;
+	padding-bottom: 75px;
+	background-image: url('../images/news-bg.jpg');
+	@media (max-width: $screen-md-max){
+		padding-top: 42px;
+		padding-bottom: 37px;
+	}
+	@media (max-width: $screen-xs-max){
+		padding-top: 30px;
+		padding-bottom: 30px;
+	}
+	&__news-block{
+		padding-top: 60px;
+		@media (max-width: $screen-md-max){
+			padding-top: 30px;
+		}		
+	}
+	&__captions{
+		border-radius: 5px;
+		max-width: 360px;
+		width: 100%;
+		margin-bottom: 50px;
+		display: block;
+		@media (max-width: $screen-md-max){
+			margin-bottom: 30px;
+		}
+		@media (max-width: $screen-sm-max){
+			margin: auto;
+			margin-bottom: 30px;
+		}
+		@media (max-width: $screen-xs-max){
+			margin: auto;
+			margin-bottom: 25px;
+		}
+		&:hover{
+			text-decoration: none;
+		}
+	}
+	&__img-wrap{
+		border-radius: 5px 5px 0 0;
+		overflow: hidden;
+		height: 160px;
+		max-width: 360px;
+		width: 100%;
+	}
+	&__desc-caption{
+		background-color: #fff;
+		box-shadow: 0px 20px 29px 0px rgba(6, 0, 255, 0.1);
+		height: 200px;
+		overflow: hidden;
+		padding: 25px 25px 0;
+		border-radius: 0 0 5px 5px;
+		@media (max-width: $screen-md-max){
+			padding: 20px 20px 0;
+		}
+		@media (max-width: $screen-xs-max){
+			padding: 15px 15px 0;
+		}
+		span{
+			font-size: 13px;
+			line-height: 21px;
+			color: #939393;
+			margin: 0;
+			padding: 0;
+			padding-bottom: 15px;
+			display: block;
+			@media (max-width: $screen-md-max){
+				padding-bottom: 10px;
+			}
+			@media (max-width: $screen-xs-max){
+				padding-bottom: 10px;
+			}
+			.fa-calendar{
+				padding-right: 10px;
+			}
+		}
+		h2{
+			font-size: 16px;
+			font-weight: 600;
+			line-height: 24px;
+			color: #1d71b8;
+			margin: 0;
+			padding: 0;
+			padding-bottom: 15px;
+			@media (max-width: $screen-md-max){
+				padding-bottom: 10px;
+			}
+			@media (max-width: $screen-xs-max){
+				padding-bottom: 10px;
+			}
+		}
+		p{
+			font-size: 13.8px;
+			line-height: 24px;
+			color: #292929;
+			margin: 0;
+			padding: 0;
+			padding-bottom: 25px;
+			@media (max-width: $screen-md-max){
+				line-height: normal;
+			}
+			@media (max-width: $screen-xs-max){
+				line-height: 24px;
+			}
+			@media screen and (max-width: 400px){
+				line-height: normal;
+			}
+		}
+	}
+	&__button{
+		a{
+			max-width: 205px;
+			width: 100%;
+			min-height: 48px;
+			line-height: 49px;
+			text-align: center;
+			color: #fff;
+			font-size: 15px;
+			font-weight: 600;
+			background-color: #ec4d27;
+			display: block;
+			border-radius: 24px;
+			margin: auto;
+			transition: all .3s ease;
+			text-decoration: none;
+			&:hover{
+				box-shadow: 0 8px 16px 0 rgba(253,73,25,.44);
+			}
+		}
+	}
+}

@@ -1,0 +1,30 @@
+.footer{
+	min-height: 125px;	
+	padding-top: 43px;
+	background-color: #f0f1f2;
+	@media (max-width: $screen-md-max){
+		padding-top: 25px;
+	}
+	@media (max-width: $screen-xs-max){
+		text-align: center;
+	}
+	p{
+		font-size: 15px;
+		line-height: 24px;
+		color: #1d71b8;
+		span{
+			color: #292929;
+		}
+	}
+	&__miss{
+		padding-right: 40px;
+		@media (max-width: $screen-md-max){
+			padding-right: 0;
+		}
+		p{
+			font-size: 15px;
+			line-height: 24px;
+			color: #7c7c7c;
+		}
+	}
+}
