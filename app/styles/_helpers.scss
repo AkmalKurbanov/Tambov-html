@@ -3,6 +3,12 @@ body{
 }
 
 
+@media (min-width: 1200px) {
+	.container {
+		width: 1200px;
+	}
+}
+
 .caption-wrap{
 	text-align: center;
 	h2{
@@ -151,6 +157,64 @@ body{
 
 
 
+// bread crumbs начало
+.bread-crumbs{
+	padding-top: 23px;
+	@media (max-width: $screen-xs-max){
+		padding-top: 0;
+	}
+	ul{
+		margin: 0;
+		padding: 0;
+		li{
+			list-style-type: none;
+			display: inline-block;
+			font-size: 14px;
+			cursor: no-drop;
+			position: relative;
+			padding-right: 28px;
+			font-weight: 600;
+			color: #1d71b8;
+			&:after{
+				position: absolute;
+				content: '/';
+				right: 10px;
+			}
+			&:last-child{
+				color: #939393;
+				&:after{
+					content: '';
+				}
+			}
+			a{
+				color: #1d71b8;
+				font-size: 14px;
+				text-decoration: none;
+			}
+		}
+	}
+}
+// bread crumbs конец
+
+//content начало
+.cont{
+	padding-top: 34px;		
+}
+//content конец
+
+// interior-caption начало
+.interior-caption{
+	font-size: 30px;
+	font-weight: 700;
+	color: #292929;
+	margin: 0;
+	padding-bottom: 40px;
+	line-height: 36px;
+	@media (max-width: $screen-sm-max){
+		padding-bottom: 30px;
+	}
+}
+// interior-caption конец
 
 
 

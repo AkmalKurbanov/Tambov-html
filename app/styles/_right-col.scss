@@ -1,0 +1,86 @@
+.right-col{		
+
+	.right-col-block-reviews{
+		padding-top: 40px;
+		padding-left: 25px;
+		padding-right: 25px;	
+		@media (max-width: $screen-md-max){
+			padding-top: 20px;
+			padding-left: 20px;
+			padding-right: 20px;
+		}
+		@media (max-width: $screen-sm-max){
+			padding-top: 40px;
+			padding-left: 25px;
+			padding-right: 25px;	
+		}
+		@media (max-width: $screen-xs-max){
+			padding-top: 20px;
+			padding-left: 20px;
+			padding-right: 20px;
+		}	
+	}
+	.right-col-news{
+		border-width: 1px;
+		border-color: rgb(240, 241, 242);
+		border-style: solid;
+		border-radius: 5px;
+		background-color: rgb(255, 255, 255);
+		box-shadow: 0px 20px 29px 0px rgba(6, 0, 255, 0.1);
+		max-width: 100%;
+		width: 100%;
+		min-height: 523px;
+		margin-bottom: 55px;
+		@media (max-width: $screen-md-max){
+			margin-bottom: 30px;
+		}
+		.right-col-caption-news{
+			text-align: center;
+			padding: 22px 0;
+			background-color: #f0f1f2;
+			h2{
+				margin: 0;
+				color: #fd4919;
+				font-size: 24px;
+				font-weight: 600;
+			}
+		}
+	}
+	.right-col-reviews{
+		padding-bottom: 36px;
+		@media (max-width: $screen-md-max){
+			padding-bottom: 15px;
+		}
+		@media (max-width: $screen-sm-max){
+			padding-bottom: 36px;
+		}
+		@media (max-width: $screen-xs-max){
+			padding-bottom: 15px;
+		}
+		span{
+			font-size: 13px;
+			line-height: 21px;
+			color: #939393;
+			display: block;
+			padding-bottom: 8px;
+			i{
+				padding-right: 10px;
+			}
+		}
+		a{
+			font-size: 13.3px;
+			line-height: 24px;
+			color: #1d71b8;
+			font-weight: 600;
+			@media (max-width: $screen-md-max){
+				line-height: 20px;
+			}
+			@media (max-width: $screen-sm-max){
+				line-height: 24px;				
+			}
+			@media (max-width: $screen-xs-max){
+				line-height: 20px;
+			}
+		}
+	}
+}
