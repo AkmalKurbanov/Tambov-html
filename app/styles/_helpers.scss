@@ -22,6 +22,29 @@ body{
 	}
 }
 
+
+
+// interior-caption начало
+.interior-caption{
+	font-size: 30px;
+	font-weight: 700;
+	color: #292929;
+	margin: 0;
+	padding-bottom: 40px;
+	line-height: 36px;
+	@media (max-width: $screen-sm-max){
+		padding-bottom: 30px;
+	}
+	@media (max-width: $screen-xs-max){
+		font-size: 20px;
+		line-height: 24px;
+	}
+}
+// interior-caption конец
+
+
+
+
 // popup окна начало 
 .window{
 	position: relative;
@@ -202,19 +225,7 @@ body{
 }
 //content конец
 
-// interior-caption начало
-.interior-caption{
-	font-size: 30px;
-	font-weight: 700;
-	color: #292929;
-	margin: 0;
-	padding-bottom: 40px;
-	line-height: 36px;
-	@media (max-width: $screen-sm-max){
-		padding-bottom: 30px;
-	}
-}
-// interior-caption конец
+
 
 
 
@@ -302,6 +313,60 @@ body{
 	}
 }
 // trigger конец
+
+
+
+// share начало
+.share{
+	padding-top: 20px;
+	p{
+		font-size: 14px;
+		color: #939393;
+		font-weight: 600;
+		display: inline-block;
+		padding-right: 30px;
+		margin: 0;
+	}
+	ul{
+		margin: 0;
+		padding: 0;
+		li{
+			list-style-type: none;
+			display: inline-block;
+			height: 46px;
+			width: 46px;
+			border-radius: 10em;
+			background-color: #f0f1f2;
+			text-align: center;
+			line-height: 46px;
+			margin-right: 10px;
+			transition: all .3s ease;				
+			&:hover{
+				box-shadow: 0 8px 16px 0 rgba(29,113,184,.20);
+			}
+			a{
+				display: block;
+				line-height: 50px;
+				border-radius: 10em;
+				i{
+					color: #1d71b8;
+					font-size: 22px;
+				}
+				.fa-odnoklassniki{
+					font-size: 18px;
+					font-weight: 600;
+				}
+				.fa-at{
+					font-weight: 600;
+				}
+			}
+		}
+	}
+}
+// share конец
+
+
+
 
 
 
